@@ -1,0 +1,48 @@
+int i;
+void setup() {
+  // put your setup code here, to run once:
+  for(i=2;i<7;i++){
+    pinMode(i,OUTPUT);
+    }
+  
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  
+  
+   for(i=7;i>1;i--){
+  analogWrite(i+4,20);
+  analogWrite(i+3,100);
+  analogWrite(i+2,150);
+  analogWrite(i+1,200);
+  analogWrite(i,255);
+  delay(100);
+
+  }
+  analogWrite(2,0);
+  analogWrite(3,0);
+  analogWrite(4,0);
+  analogWrite(5,0);
+  analogWrite(6,0);
+  delay(100);
+  
+  for(i=2;i<7;i++){
+  if((i-4)>1)
+  analogWrite(i-4,20);
+  if((i-3)>1)
+  analogWrite(i-3,100);
+  if((i-2)>1)
+  analogWrite(i-2,150);
+  if((i-1)>=1)
+  analogWrite(i-1,200);
+  analogWrite(i,255);
+  delay(100);
+}
+  analogWrite(2,0);
+  analogWrite(3,0);
+  analogWrite(4,0);
+  analogWrite(5,0);
+  analogWrite(6,0);
+}
+//Knight rider circuit with fading
