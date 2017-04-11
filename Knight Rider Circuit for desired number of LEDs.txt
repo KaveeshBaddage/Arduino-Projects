@@ -1,0 +1,45 @@
+int i=2;
+int quntity=5;
+int HwMchPin=12;
+void setup() {
+  // put your setup code here, to run once:
+  for(i;i<HwMchPin+2;i++){
+    pinMode(i,OUTPUT);
+    }
+  
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  
+  
+   for(i=HwMchPin+2;i>0;i--){
+    for(int j=i,z=0  ;j<(j+quntity), z<quntity+1 ; j++,z++){
+      analogWrite(j,((255/quntity)*(quntity-(z))));
+    }
+    
+  
+  delay(50);
+  }
+  for(i=2;i<HwMchPin+2;i++){
+  analogWrite(i,0);
+  }
+  delay(150);
+
+   for(i=2;i<HwMchPin+3;i++){
+    for(int j=i,z=0  ;j<(j+quntity), z<quntity+1; j++,z++){
+      analogWrite(j,((255/quntity)*(z)));
+    }
+    analogWrite(5,0);
+    analogWrite(4,0);
+    analogWrite(3,0);
+    analogWrite(2,0);
+    
+    
+    delay(50);
+   }
+
+for(i=2;i<HwMchPin+2;i++){
+  analogWrite(i,0);  
+}
+}
